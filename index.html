@@ -45,6 +45,10 @@
 
   #home img { max-width: 100%; max-height: 70svh; display: block; }
 
+  #info { text-align: center; font-size: var(--fs); line-height: 1.3; }
+  #info p { margin: 0 0 2rem; }
+  #info a { padding: 0; }
+
   #list { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
 
   #slideshow { display: flex; flex-direction: column; align-items: center; width: 100%; }
@@ -82,7 +86,7 @@
 </head>
 <body>
 <nav>
-  <a href="#info">info</a>
+  <button class="link" id="nav-info">info</button>
   <button class="link" id="nav-exhibitions">exhibitions</button>
   <a href="#contact">contact</a>
 </nav>
@@ -90,6 +94,12 @@
 <main>
   <div id="home">
     <img src="logo.jpg" alt="tuman atelier floor plan">
+  </div>
+
+  <div id="info" hidden>
+    <p>Tuman Atelier<br>Mariensztat 15/2<br>Warsaw, Poland</p>
+    <p><a href="https://maps.app.goo.gl/3BQe9QwpnStnPiif8" target="_blank" rel="noopener">Map →</a></p>
+    <p>Opening Hours:<br>currently closed<br>Next opening: December</p>
   </div>
 
   <div id="list" hidden>
@@ -149,7 +159,7 @@
   const INTERVAL = 4000;
 
   const $ = id => document.getElementById(id);
-  const home = $("home"), list = $("list"), show = $("slideshow");
+  const home = $("home"), list = $("list"), show = $("slideshow"), info = $("info");
   const base = $("base"), overlay = $("top"), counter = $("counter");
 
   let slides = [], index = 0, timer = null, busy = false;
@@ -158,10 +168,12 @@
     home.hidden = name !== "home";
     list.hidden = name !== "list";
     show.hidden = name !== "show";
+    info.hidden = name !== "info";
     if (name !== "show") stop();
     window.scrollTo(0, 0);
   }
 
+  $("nav-info").onclick = () => view(info.hidden ? "info" : "home");
   $("nav-exhibitions").onclick = () => view(list.hidden ? "list" : "home");
   $("open-001").onclick = () => start(exhibition001);
 
