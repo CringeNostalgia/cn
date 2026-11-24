@@ -127,6 +127,9 @@
 
   function update() { counter.textContent = pad(index + 1) + " / " + pad(slides.length); }
 
+  // if a photo can't be found, show which file the browser was looking for
+  base.onerror = () => { counter.textContent = "can't load: " + base.getAttribute("src"); };
+
   function go(to) {
     if (busy) return;
     busy = true;
