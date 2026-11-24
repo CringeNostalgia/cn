@@ -61,14 +61,38 @@
 </main>
 
 <script>
-  // ---- exhibition 001 images (put them in the "images" folder in your repo) ----
-  const FOLDER = "images/";
-  const P = "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet";
-  const pad = n => String(n).padStart(2, "0");
+  // ---- exhibition 001 images (same names as in the repo, in the root folder) ----
   const exhibition001 = [
-    ...Array.from({length: 21}, (_, i) => `${P}${pad(i + 1)}.jpg`),   // internet01 ... internet21
-    ...Array.from({length: 8},  (_, i) => `${P}_${pad(i + 2)}.jpg`),  // internet_02 ... internet_09
-  ].map(f => FOLDER + f);
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet01.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet02.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet03.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet04.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet05.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet06.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet07.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet08.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet09.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet10.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet11.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet12.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet13.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet14.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet15.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet16.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet17.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet18.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet19.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet20.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet21.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet_02.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet_03.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet_04.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet_05.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet_06.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet_07.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet_08.jpg",
+    "20260930_dokumentacja_VictoriaNormal_TumanAtelier_internet_09.jpg"
+  ];
 
   const INTERVAL = 4000;
 
