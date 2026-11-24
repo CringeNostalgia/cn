@@ -13,7 +13,8 @@
 
   :root {
     --fs: clamp(1.7rem, 6vw, 2.4rem);
-    --gap: clamp(1.2rem, 5vw, 3.5rem);
+    --nav-fs: clamp(1.3rem, 5.2vw, 2.4rem);
+    --gap: clamp(0.9rem, 4vw, 3.5rem);
   }
 
   * { box-sizing: border-box; }
@@ -34,6 +35,7 @@
     color: #000; text-decoration: none; font: inherit; font-size: var(--fs); letter-spacing: 0.03em;
     background: none; border: 0; padding: 0.2rem 0; cursor: pointer; -webkit-tap-highlight-color: transparent;
   }
+  nav a, nav button.link { font-size: var(--nav-fs); }
   a:hover, button.link:hover { text-decoration: underline; text-underline-offset: 4px; }
 
   main {
@@ -88,7 +90,8 @@
 <nav>
   <button class="link" id="nav-info">info</button>
   <button class="link" id="nav-exhibitions">exhibitions</button>
-  <a href="#contact">contact</a>
+  <a href="https://www.instagram.com/tuman_atelier/" target="_blank" rel="noopener">news</a>
+  <a href="mailto:zuzannamajaczak@gmail.com">contact</a>
 </nav>
 
 <main>
@@ -98,7 +101,7 @@
 
   <div id="info" hidden>
     <p>Tuman Atelier<br>Mariensztat 15/2<br>Warsaw, Poland</p>
-    <p><a href="https://maps.app.goo.gl/3BQe9QwpnStnPiif8" target="_blank" rel="noopener">Map →</a></p>
+    <p><a href="https://www.google.com/maps/place/Mariensztat+15,+00-302+Warszawa/@52.2460335,21.0151253,17z/data=!3m1!4b1!4m6!3m5!1s0x471ecc67b8b551cb:0x3b3c28577b7bb65e!8m2!3d52.2460302!4d21.0177002!16s%2Fg%2F11nnkyhv4y!5m1!1e1?entry=ttu&amp;g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Map →</a></p>
     <p>Opening Hours:<br>currently closed<br>Next opening: December</p>
   </div>
 
